@@ -20,6 +20,7 @@
     
 }
 .pagelogo{
+    opacity: 0.0;
     position: absolute;
     margin-left: 40vw;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -60,11 +61,13 @@
     100%{background-image: radial-gradient(circle,black, black, black,black,black);}
 }
 .body{
-    animation: falldown 5s 1;
+    opacity: 0.7;
+    animation: falldown 7s 1;
     animation-fill-mode: forwards;
 }
 
 @keyframes falldown{
-    from{ transform:rotate(10deg);}
-    to{ transform:translateY(10000px);}
+    0%{ transform:rotate(10deg);}
+    99%{ transform:translateY(1000px);}
+    100%{opacity:0;}
 }

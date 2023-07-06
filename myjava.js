@@ -1,24 +1,30 @@
 const colori = ["blue" , "red", "yellow"];
 const bgbtn = document.getElementById('bgcolor');
-const saycolor = document.querySelector('.saycolor')
 bgbtn.addEventListener("click", function (){
-    var randomcolor = getRandomNumber();
-    console.log(randomcolor);
+    var randomcolor =Math.floor(Math.random() * colori.length);
+
     document.body.style.backgroundColor = colori[randomcolor];
-    saycolor.textContent = colori[randomcolor];
+
 }); 
 
-function getRandomNumber() {
-    return Math.floor(Math.random() * colori.length);
-}
 function myexplosion(){
     const bg = document.getElementById("bg");
-    bg.className = "explosion"
-    setTimeout(changebodyclass,1500)
-    
-
+    bg.className = "explosion";
+    setTimeout(changebodyclass,2500);
 }
 function changebodyclass() {
-    const body = document.getElementById("body");
-    body.className = "body"
+    const body = document.getElementById("bomb");
+    body.className = "body btnbomb";
+    setTimeout(changenavclass,3000)
+}
+function changenavclass() {
+    const nav = document.getElementById("navbar");
+    nav.className = "body navbar navbar-expand-lg bg-body-tertiary";
+    setTimeout(changebtn1vclass,1500)
+    const bg = document.getElementById("body");
+    bg.className = "body";
+}
+function changebtn1vclass(){
+    const body = document.getElementById("bgcolor");
+    body.className = "body btn fromlist";
 }
