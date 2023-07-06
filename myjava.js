@@ -10,21 +10,21 @@ bgbtn.addEventListener("click", function (){
 function myexplosion(){
     const bg = document.getElementById("bg");
     bg.className = "explosion";
-    setTimeout(changebodyclass,2500);
+    setTimeout(changebodyclass,1700);
 }
 function changebodyclass() {
     const body = document.getElementById("bomb");
-    body.className = "body btnbomb";
-    setTimeout(changenavclass,3000)
+    body.className = "falldown btnbomb";
+    setTimeout(changenavclass,1700)
 }
 function changenavclass() {
     const nav = document.getElementById("navbar");
-    nav.className = "body navbar navbar-expand-lg bg-body-tertiary";
-    setTimeout(changebtn1vclass,1500)
+    nav.className = "falldown navbar navbar-expand-lg bg-body-tertiary";
+    setTimeout(changebtn1vclass,777)
     const bg = document.getElementById("body");
-    bg.className = "body";
+    bg.className = "falldown";
 }
 function changebtn1vclass(){
     const body = document.getElementById("bgcolor");
-    body.className = "body btn fromlist";
+    body.className = "falldown btn fromlist";
 }
