@@ -1,0 +1,70 @@
+.fromlist{
+    background-color: cornflowerblue;
+    border-radius: 10pc ;
+    border-color: rgb(47, 255, 0);
+    border-style: dotted;
+    position: relative;
+    padding: 8px 15px;
+    margin-left: 10vw;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 600;
+    
+}
+.fromlist:hover{
+    border-color: black;
+    font-weight: 900;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
+    color:darkmagenta;
+    background-color: cornflowerblue;
+    
+}
+.pagelogo{
+    position: absolute;
+    margin-left: 40vw;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 300;
+    font-size: xx-large;
+    font-style: italic;
+    color:darkgreen;
+}
+.btnbomb{
+    background-color: cornflowerblue;
+    border-radius: 18pc ;
+    border-color: red;
+    border-style:groove;
+    position: relative;
+    padding: 8px 15px;
+    margin-left: 10vw;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 600;
+
+}
+
+
+.explosion{
+    padding-top: 10px;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    height: 100vh;
+    animation: mybomb 0.5s 2;
+    animation-fill-mode: forwards;
+    
+}
+
+
+@keyframes mybomb {
+    0%{background-image: radial-gradient(circle,black,white,white,white,white);}
+    33%{background-image: radial-gradient(circle,black,black,white,white,white);}
+    66%{background-image: radial-gradient(circle,black,black,black,white,white );}
+    100%{background-image: radial-gradient(circle,black, black, black,black,black);}
+}
+.body{
+    animation: falldown 5s 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes falldown{
+    from{ transform:rotate(10deg);}
+    to{ transform:translateY(10000px);}
+}
